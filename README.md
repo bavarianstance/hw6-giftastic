@@ -1,7 +1,8 @@
 # HW6-Giftastic
 
 ## Executive Summary
-* Short project showcasing use of APIs via AJAX calls, leveraged combination of popular libraries including jQuery and Bootstrap.
+* Short project showcasing use of APIs via AJAX calls, leveraged combination of popular libraries including jQuery and Bootstrap. 
+[Link to Github Pages](https://bavarianstance.github.io/hw6-giftastic/ "Giftastic Widget")
 
 ## Technologies Used
 * HTML
