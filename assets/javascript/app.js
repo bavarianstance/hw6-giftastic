@@ -1,5 +1,7 @@
+//global variable supplied cars array
 var cars = ["Audi", "BMW", "Mercedes Benz", "Volkswagen", "Bugatti", "Aston Martin", "Mazda", "Honda", "Toyota", "Lexus", "Acura", "Nissan", "Infiniti", "Subaru", "Mitsubishi", "Hyundai", "Volvo", "Lamborghini", "Ferrari", "Porsche"]
 
+//renderTags function iterating thru cars array
 function renderTags() {
 	$("#tags").empty();
 for (var i = 0; i < cars.length; i++){
@@ -33,9 +35,10 @@ $("#add-tag").on("click", function(event) {
 function renderGifs() {
 	$("#imgs").empty();
 	var make = $(this).attr("data-make");
-	//queryURL specification with randomize feature
+	//queryURL specification 
 	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        make + "&api_key=CwQQ9vOY5c6CbG9BjLDdCeH4kgr9Lbyy&limit=10&offset=" + Math.floor(Math.random() * 10);
+        make + "&api_key=CwQQ9vOY5c6CbG9BjLDdCeH4kgr9Lbyy&limit=10"; 
+        // doesn't work :( &offset=" + Math.floor(Math.random() * 10);
  	//AJAX call
  	$.ajax({
  		url: queryURL,
@@ -55,6 +58,7 @@ function renderGifs() {
  			  makeImage.attr("data-state", "still");
  			  makeImage.addClass("gif");
  			  makeImage.attr("data-animate", results[j].images.fixed_height.url);
+ 			// add gifs to HTML
  			gifDiv.append(makeImage);
  			gifDiv.append(p);
  			$("#imgs").prepend(gifDiv);  
@@ -63,6 +67,7 @@ function renderGifs() {
 
  };
 
+// on click animate gif functionality
  $(document).on("click", ".gif", function(){
  	var state = $(this).attr("data-state");
  		if (state === "still"){
@@ -74,6 +79,8 @@ function renderGifs() {
  		}
  });
 
+//on Click listener to renderGifs
  $(document).on("click", ".carmake", renderGifs);
 
+//initial renderTags function call
 renderTags();
