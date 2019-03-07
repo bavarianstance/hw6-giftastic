@@ -1,4 +1,21 @@
+body {
+  background:linear-gradient(to right,
+      #4599FE, #031E49, #EE0405, #FFFDFE, #2D4046, #B8CAD1);
+}
+
 .btn {
 	padding: 12px;
 	margin: 5px;
+}
+
+p {
+font-family: Impact;
+}
+
+h1 {
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  text-align:center;
+  font-family: Arial Black;
 }
