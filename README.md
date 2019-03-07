@@ -15,7 +15,8 @@
 
 
 ### Comments
-* ES6 syntax caused errors when combined with jQuery ES5 syntax, reverted.
+* ES6 syntax caused errors when combined with jQuery ES5 syntax, refactored.
 * Added edge case to prevent adding of blank tags
 * Added edge case to prevent adding of duplicate tags
 * Added offset to API call with random integer to randomize search results (removed as it was causing CORS Access Control error intermittently)
+* Added Linear Gradient Background Color in BMW //M colors
